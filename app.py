@@ -23,7 +23,7 @@ st.subheader("Upcoming Collections")
 rows = get_upcoming_collections()
 
 if rows:
-    for date, type_ in rows:
+    for date, type_ in rows[:3]:
         st.write(f"📅 {date} — {type_}")
 else:
     st.info("No data available. Click the button above.")
